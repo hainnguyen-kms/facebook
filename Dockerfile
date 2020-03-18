@@ -6,7 +6,7 @@ COPY src /tmp/src/
 WORKDIR /tmp/
 RUN mvn -B -s /usr/share/maven/ref/settings-docker.xml package
 
-FROM java:11-jre-alpine
+FROM openjdk:11.0-jre
 
 EXPOSE 8080
 
