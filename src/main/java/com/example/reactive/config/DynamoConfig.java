@@ -16,7 +16,7 @@ public class DynamoConfig {
     public DynamoDbAsyncClient dynamoDbAsyncClient(){
         return DynamoDbAsyncClient.builder()
                 .region(Region.AP_SOUTHEAST_1)
-                .credentialsProvider(SystemPropertyCredentialsProvider.create())
+                .credentialsProvider(DefaultCredentialsProvider.builder().build())
                 .build();
     }
 

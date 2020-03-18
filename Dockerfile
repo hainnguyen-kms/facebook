@@ -13,4 +13,4 @@ EXPOSE 8080
 RUN mkdir /app
 COPY --from=MAVEN_TOOL_CHAIN /tmp/target/*.jar /app/spring-boot-application.jar
 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-Daws.accessKeyId=AKIAW5BA2BPHOWHP5Y5S","-Daws.secretAccessKey=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","-jar","/app/spring-boot-application.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/spring-boot-application.jar"]
